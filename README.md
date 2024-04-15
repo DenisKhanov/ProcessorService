@@ -1,10 +1,10 @@
-## RU Описание SecondService
+## RU Описание ProcessorService
 
-SecondService — это сервис который читает сообщения из топика Handler брокера Kafka, изменяет JSON и отправляет его в другой топик.  Вот основные детали:
+ProcessorService — это сервис который читает сообщения из топика Handler брокера Kafka, изменяет JSON и отправляет его в другой топик.  Вот основные детали:
 
 ### Настройки
 
-Вы можете настроить SecondService с использованием следующих флагов командной строки или переменных окружения:
+Вы можете настроить ProcessorService с использованием следующих флагов командной строки или переменных окружения:
 
 - `SERVER_ADDRESS` (`-a`): **Уровень логирования**: По умолчанию установлен на `info`.
 - `LOG_LEVEL` (`-l`): **Адрес сервера**: По умолчанию — `localhost:9090`.
@@ -37,7 +37,7 @@ SecondService — это сервис который читает сообщен
 
 ## Начало работы
 
-Чтобы запустить FirstService, используйте следующую команду:
+Чтобы запустить ProcessorService, используйте следующую команду:
 
 ```bash
 go run main.go -a <адрес_сервера> -l <уровень_логирования> -b <адрес_брокера>
@@ -47,7 +47,7 @@ go run main.go -a <адрес_сервера> -l <уровень_логиров�
 
 ## Зависимости
 
-FirstService зависит от следующих внешних библиотек:
+ProcessorService зависит от следующих внешних библиотек:
 
 - [GitHub - Sarama](https://github.com/IBM/sarama): Библиотека для работы с Kafka
 - [Github.com/sirupsen/logrus](https://github.com/sirupsen/logrus): Библиотека для логирования
@@ -60,13 +60,13 @@ ____________________________________________________________
 
 
 
-## EN  SecondService
+## EN  ProcessorService
 
-SecondService is a service that reads messages from the Handler topic of the Kafka broker, modifies JSON, and sends it to another topic. Here are the main details:
+ProcessorService is a service that reads messages from the Handler topic of the Kafka broker, modifies JSON, and sends it to another topic. Here are the main details:
 
 ### Settings
 
-You can configure SecondService using the following command-line flags or environment variables:
+You can configure ProcessorService using the following command-line flags or environment variables:
 
 - `SERVER_ADDRESS` (`-a`): **Logging Level**: Defaults to `info`.
 - `LOG_LEVEL` (`-l`): **Server Address**: Defaults to `localhost:9090`.
